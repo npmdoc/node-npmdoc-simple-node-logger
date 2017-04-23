@@ -1,0 +1,2460 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/darrylwest/simple-node-logger"
+
+    >simple-node-logger (v0.93.17)</a>
+</h1>
+<h4>A simple node console and file logger suitable for small, medium and large projects.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-node-logger">module simple-node-logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.simple-node-logger">
+            function <span class="apidocSignatureSpan"></span>simple-node-logger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.AbstractAppender">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>AbstractAppender
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.Logger">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>Logger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>SimpleLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.createLogManager">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>createLogManager
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.createRollingFileLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>createRollingFileLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.createSimpleFileLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>createSimpleFileLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.createSimpleLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>createSimpleLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.mocks.MockLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>mocks.MockLogger
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-node-logger.</span>appenders</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-node-logger.</span>mocks</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-node-logger.AbstractAppender">module simple-node-logger.AbstractAppender</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.AbstractAppender.AbstractAppender">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>AbstractAppender
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.AbstractAppender.extend">
+            function <span class="apidocSignatureSpan">simple-node-logger.AbstractAppender.</span>extend
+            <span class="apidocSignatureSpan">(child, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-node-logger.SimpleLogger">module simple-node-logger.SimpleLogger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger.SimpleLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.</span>SimpleLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger.AbstractAppender">
+            function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>AbstractAppender
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger.Logger">
+            function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>Logger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger.createLogManager">
+            function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createLogManager
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger.createRollingFileLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createRollingFileLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger.createSimpleFileLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createSimpleFileLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.SimpleLogger.createSimpleLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createSimpleLogger
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>appenders</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>mocks</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-node-logger.appenders">module simple-node-logger.appenders</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.appenders.ConsoleAppender">
+            function <span class="apidocSignatureSpan">simple-node-logger.appenders.</span>ConsoleAppender
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.appenders.FileAppender">
+            function <span class="apidocSignatureSpan">simple-node-logger.appenders.</span>FileAppender
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.appenders.RollingFileAppender">
+            function <span class="apidocSignatureSpan">simple-node-logger.appenders.</span>RollingFileAppender
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-node-logger.mocks">module simple-node-logger.mocks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.mocks.MockAppender">
+            function <span class="apidocSignatureSpan">simple-node-logger.mocks.</span>MockAppender
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.mocks.MockLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.mocks.</span>MockLogger
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.simple-node-logger.mocks.MockLogger">module simple-node-logger.mocks.MockLogger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.mocks.MockLogger.MockLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.mocks.</span>MockLogger
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.simple-node-logger.mocks.MockLogger.createLogger">
+            function <span class="apidocSignatureSpan">simple-node-logger.mocks.MockLogger.</span>createLogger
+            <span class="apidocSignatureSpan">(category, level)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-node-logger" id="apidoc.module.simple-node-logger">module simple-node-logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.simple-node-logger" id="apidoc.element.simple-node-logger.simple-node-logger">
+        function <span class="apidocSignatureSpan"></span>simple-node-logger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">simple-node-logger = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) options = {};
+
+    var manager = this,
+        domain = options.domain,
+        appenders = options.appenders || [],
+        loggers = options.loggers || [],
+        dfltLevel = options.level || Logger.DEFAULT_LEVEL,
+        loggerConfigFile = options.loggerConfigFile,
+        refresh = options.refresh,
+        fs = options.fs || require(&#x27;fs&#x27; ),
+        createInterval = options.createInterval || setInterval,
+        minRefresh = options.minRefresh || 10 * 1000,
+        refreshId;
+
+<span class="apidocCodeCommentSpan">    /**
+     * create a logger with optional category and level
+     *
+     * @param category
+     * @param level
+     */
+</span>    this.createLogger = function(category, level) {
+        var logger;
+
+        var opts = Object.prototype.toString.call(category) === &#x27;[object String]&#x27; ? options : dash.merge({}, options, category);
+
+        opts.category  = dash.isString(category) ? category : opts.category;
+        opts.level     = level ? level : opts.level || dfltLevel;
+        opts.appenders = appenders;
+
+        logger = new Logger( opts );
+        loggers.push( logger );
+
+        return logger;
+    };
+
+    /**
+     * create the console appender and add it to the appenders list
+     *
+     * @param opts - appender settings
+     * @returns ConsoleAppender -
+     */
+    this.createConsoleAppender = function(opts) {
+        if (!opts) opts = {};
+
+        return manager.addAppender( new ConsoleAppender( opts ) );
+    };
+
+    /**
+     * create a file appender and add it to the appenders list
+     *
+     * @param opts
+     * @returns a FileAppender object
+     */
+    this.createFileAppender = function(opts) {
+        if (!opts) {
+            throw new Error(&#x27;file appender must be created with log file path set in options&#x27;);
+        }
+
+        return manager.addAppender( new FileAppender( opts ) );
+    };
+
+    /**
+     * create a rolling file appender and add it to the appender list
+     *
+     * @param opts
+     * @returns the appender
+     */
+    this.createRollingFileAppender = function( opts ) {
+        return manager.addAppender( new RollingFileAppender( opts ) );
+    };
+
+    /**
+     * add the appender to list
+     *
+     * @param appender
+     * @returns the new appender
+     */
+    this.addAppender = function(appender) {
+        appenders.push( appender );
+
+        return appender;
+    };
+
+    this.getAppenders = function() {
+        return appenders;
+    };
+
+    this.getLoggers = function() {
+        return loggers;
+    };
+
+    /**
+     * start the refresh thread; minimum cycle time = 10 seconds...
+     */
+    this.startRefreshThread = function() {
+        // TODO replace with watcher thread
+        if (fs.existsSync( loggerConfigFile ) &#x26;&#x26; dash.isNumber( refresh )) {
+            var t = Math.max( minRefresh, refresh );
+            refreshId = createInterval( manager.readConfig, t);
+        }
+    };
+
+    /**
+     * set the level of all loggers to the specified level
+     *
+     * @param level - one of the know levels
+     */
+    this.setAllLoggerLevels = function(level) {
+        loggers.forEach(function(logger) {
+            logger.setLevel( level );
+        });
+    };
+
+    /**
+     * read and parse the config file; change settings if required
+     */
+    this.readConfig = function(completeCallback) {
+        // TODO refactor into configuration delegate to read stats and then process file only if stats change
+        const callback = (err, buf) =&#x3e; {
+            if (err) {
+                console.log( err );
+            } else {
+
+                const conf = JSON.parse( buf.toString() );
+                if (conf.appenders &#x26;&#x26; conf.appenders.length &#x3e; 0) {
+                    // find each appender and set the level
+                    conf.appenders.forEach(function(app) {
+                        const level = app.level;
+
+                        const appender = dash.find( appenders, (item) =&#x3e; {
+                            if (item.getTypeName() === app.typeName &#x26;&#x26; app.level) {
+                                return item;
+                            } ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.AbstractAppender" id="apidoc.element.simple-node-logger.AbstractAppender">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>AbstractAppender
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractAppender = function (options) {
+    &#x27;use strict&#x27;;
+
+    const appender = this,
+        typeName = options.typeName,
+        timestampFormat = options.timestampFormat || &#x27;HH:mm:ss.SSS&#x27;;
+
+    this.separator = options.separator || &#x27; &#x27;;
+
+<span class="apidocCodeCommentSpan">    /**
+     * format the entry and return the field list
+     *
+     * @param entry the log entry
+     * @returns field array
+     */
+</span>    this.formatEntry = function(entry) {
+        var fields = [];
+
+        if (entry.domain) {
+            fields.push( entry.domain );
+        }
+
+        fields.push( appender.formatTimestamp( entry.ts ) );
+        fields.push( appender.formatLevel( entry.level ) );
+
+        if (entry.category) {
+            fields.push( entry.category );
+        }
+
+        fields.push( appender.formatMessage( entry.msg ) );
+
+        return fields;
+    };
+
+    this.formatMessage = function(msg) {
+        var list;
+
+        if (!msg) {
+            return &#x27;&#x27;;
+        }
+
+        if (util.isArray( msg )) {
+            list = msg.map(function(item) {
+                if (util.isDate( item )) {
+                    return appender.formatDate( item );
+                } else {
+                    return appender.formatObject( item );
+                }
+            });
+
+            return list.join(&#x27;&#x27;);
+        } else {
+            return msg;
+        }
+    };
+
+    this.formatDate = function(value) {
+        return value.toJSON();
+    };
+
+    this.formatObject = function(value) {
+        if (!value) {
+            return &#x27;&#x27;;
+        }
+
+        if (dash.isObject( value )) {
+            try {
+                return JSON.stringify( value );
+            } catch (ignore) {
+                return &#x27;json error: &#x27; + value.toString();
+            }
+        } else {
+            var s = value.toString();
+            if (s === &#x27;[object Object]&#x27;) {
+                return util.inspect( value );
+            } else {
+                return s;
+            }
+        }
+    };
+
+    /**
+     * format the level string by forcing to upper case and padding to 5 chars
+     *
+     * @param level
+     * @returns {string}
+     */
+    this.formatLevel = function(level) {
+        var str = level.toUpperCase();
+        if (str.length &#x3c; 5) str += &#x27; &#x27;;
+
+        return str;
+    };
+
+    /**
+     * format the timestamp to HH:mm:ss.SSS
+     *
+     * @param ts the unix milliseconds
+     * @returns formatted string
+     */
+    this.formatTimestamp = function(ts) {
+        return moment( ts ).format( timestampFormat );
+    };
+
+    /**
+     * return the type name of this appender (ConsoleAppender)
+     */
+    this.getTypeName = function() {
+        return typeName;
+    };
+
+    // constructor tests
+    if (!typeName) throw new Error(&#x27;appender must be constructed with a type name&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.Logger" id="apidoc.element.simple-node-logger.Logger">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>Logger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Logger = function (options) {
+    &#x27;use strict&#x27;;
+
+    const logger = this,
+        pid = options.pid || process.pid;
+
+    let domain = options.domain,
+        category = options.category,
+        level = options.level || Logger.DEFAULT_LEVEL,
+        levels = options.levels || Logger.STANDARD_LEVELS,
+        currentLevel = levels.indexOf( level ),
+        appenders = options.appenders || [];
+
+    // helper method
+    const isLevelAt = function(lvl) {
+        const idx = levels.indexOf( lvl );
+
+        return idx &#x3e;= currentLevel;
+    };
+
+<span class="apidocCodeCommentSpan">    /**
+     * log the statement message
+     *
+     * @param level the level of this message
+     * @param msg
+     */
+</span>    this.log = function(level, msg) {
+        var entry = logger.createEntry( level, msg );
+
+        process.nextTick(function() {
+            // write the message to the appenders...
+            appenders.forEach(function(appender) {
+                appender.write( entry );
+            });
+        });
+
+        return entry;
+    };
+
+    /**
+     * create the entry object used to log messages
+     *
+     * @param level - info, debug, etc.
+     * @param messageList - a list of message objects
+     * @returns then entry object
+     */
+    this.createEntry = function(level, messageList) {
+        const entry = {};
+
+        entry.ts = Date.now();
+
+        entry.pid = pid;
+        if (domain) entry.domain = domain;
+        if (category) entry.category = category;
+
+        entry.level = level;
+        entry.msg = messageList;
+
+        return entry;
+    };
+
+    /**
+     * set the level
+     *
+     * @param lvl one of the recognized logger levels
+     */
+    this.setLevel = function(lvl) {
+        currentLevel = levels.indexOf(lvl);
+        level = lvl;
+        appenders.forEach(app =&#x3e; {
+            app.setLevel( lvl );
+        });
+    };
+
+    /**
+     * return the current level string
+     */
+    this.getLevel = function() {
+        return level;
+    };
+
+    /**
+     * set the list of appenders
+     * @param app
+     */
+    this.setAppenders = function(appenderList) {
+        appenders = appenderList;
+    };
+
+    /**
+     * add an appender to the list
+     *
+     * @param appender - implements write method
+     */
+    this.addAppender = function(appender) {
+        appenders.push( appender );
+    };
+
+    /**
+     * remove the appender using the type name
+     */
+    this.removeAppender = function(typeName) {
+        throw new Error(&#x27;not implemented yet&#x27;);
+    };
+
+    this.getAppenders = function() {
+        return appenders;
+    };
+
+    this.isDebug = function() {
+        return isLevelAt( &#x27;debug&#x27; );
+    };
+
+    this.isInfo = function() {
+        return isLevelAt( &#x27;info&#x27; );
+    };
+
+    // now initialize the methods for the standard levels
+    const init = function() {
+        levels.forEach(function(lvl) {
+            logger[ lvl ] = function() {
+                if (levels.indexOf( lvl ) &#x3e;= currentLevel) {
+                    var args = Array.prototype.slice.call( arguments );
+                    logger.log( lvl, args );
+                }
+            };
+        });
+    };
+
+    this.__protected = function() {
+        return {
+            pid:pid,
+            domain:domain,
+            category:category
+        };
+    };
+
+    init();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger" id="apidoc.element.simple-node-logger.SimpleLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>SimpleLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SimpleLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) options = {};
+
+    var manager = this,
+        domain = options.domain,
+        appenders = options.appenders || [],
+        loggers = options.loggers || [],
+        dfltLevel = options.level || Logger.DEFAULT_LEVEL,
+        loggerConfigFile = options.loggerConfigFile,
+        refresh = options.refresh,
+        fs = options.fs || require(&#x27;fs&#x27; ),
+        createInterval = options.createInterval || setInterval,
+        minRefresh = options.minRefresh || 10 * 1000,
+        refreshId;
+
+<span class="apidocCodeCommentSpan">    /**
+     * create a logger with optional category and level
+     *
+     * @param category
+     * @param level
+     */
+</span>    this.createLogger = function(category, level) {
+        var logger;
+
+        var opts = Object.prototype.toString.call(category) === &#x27;[object String]&#x27; ? options : dash.merge({}, options, category);
+
+        opts.category  = dash.isString(category) ? category : opts.category;
+        opts.level     = level ? level : opts.level || dfltLevel;
+        opts.appenders = appenders;
+
+        logger = new Logger( opts );
+        loggers.push( logger );
+
+        return logger;
+    };
+
+    /**
+     * create the console appender and add it to the appenders list
+     *
+     * @param opts - appender settings
+     * @returns ConsoleAppender -
+     */
+    this.createConsoleAppender = function(opts) {
+        if (!opts) opts = {};
+
+        return manager.addAppender( new ConsoleAppender( opts ) );
+    };
+
+    /**
+     * create a file appender and add it to the appenders list
+     *
+     * @param opts
+     * @returns a FileAppender object
+     */
+    this.createFileAppender = function(opts) {
+        if (!opts) {
+            throw new Error(&#x27;file appender must be created with log file path set in options&#x27;);
+        }
+
+        return manager.addAppender( new FileAppender( opts ) );
+    };
+
+    /**
+     * create a rolling file appender and add it to the appender list
+     *
+     * @param opts
+     * @returns the appender
+     */
+    this.createRollingFileAppender = function( opts ) {
+        return manager.addAppender( new RollingFileAppender( opts ) );
+    };
+
+    /**
+     * add the appender to list
+     *
+     * @param appender
+     * @returns the new appender
+     */
+    this.addAppender = function(appender) {
+        appenders.push( appender );
+
+        return appender;
+    };
+
+    this.getAppenders = function() {
+        return appenders;
+    };
+
+    this.getLoggers = function() {
+        return loggers;
+    };
+
+    /**
+     * start the refresh thread; minimum cycle time = 10 seconds...
+     */
+    this.startRefreshThread = function() {
+        // TODO replace with watcher thread
+        if (fs.existsSync( loggerConfigFile ) &#x26;&#x26; dash.isNumber( refresh )) {
+            var t = Math.max( minRefresh, refresh );
+            refreshId = createInterval( manager.readConfig, t);
+        }
+    };
+
+    /**
+     * set the level of all loggers to the specified level
+     *
+     * @param level - one of the know levels
+     */
+    this.setAllLoggerLevels = function(level) {
+        loggers.forEach(function(logger) {
+            logger.setLevel( level );
+        });
+    };
+
+    /**
+     * read and parse the config file; change settings if required
+     */
+    this.readConfig = function(completeCallback) {
+        // TODO refactor into configuration delegate to read stats and then process file only if stats change
+        const callback = (err, buf) =&#x3e; {
+            if (err) {
+                console.log( err );
+            } else {
+
+                const conf = JSON.parse( buf.toString() );
+                if (conf.appenders &#x26;&#x26; conf.appenders.length &#x3e; 0) {
+                    // find each appender and set the level
+                    conf.appenders.forEach(function(app) {
+                        const level = app.level;
+
+                        const appender = dash.find( appenders, (item) =&#x3e; {
+                            if (item.getTypeName() === app.typeName &#x26;&#x26; app.level) {
+                                return item;
+                            } ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.createLogManager" id="apidoc.element.simple-node-logger.createLogManager">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>createLogManager
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createLogManager = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) {
+        options = {};
+    }
+
+    var opts;
+
+    // read a dynamic config file if available
+    if (typeof options.readLoggerConfig === &#x27;function&#x27;) {
+        opts = options.readLoggerConfig();
+
+        opts.readLoggerConfig = options.readLoggerConfig;
+    } else {
+        opts = options;
+    }
+
+    var manager = new SimpleLogger( opts );
+
+    if (opts.logDirectory &#x26;&#x26; opts.fileNamePattern) {
+        manager.createRollingFileAppender( opts );
+    }
+
+    // create at least one appender
+    if (manager.getAppenders().length === 0) {
+        manager.createConsoleAppender( opts );
+    }
+
+    return manager;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+const log = require(&#x27;simple-node-logger&#x27;).createRollingFileLogger( opts );
+
+or
+
+	// create a log manager
+const manager = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createLogManager</span>();
+
+manager.createConsoleAppender();
+
+const log = manager.createLogger(&#x27;MyClass&#x27;);
+// create other logs and appenders...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.createRollingFileLogger" id="apidoc.element.simple-node-logger.createRollingFileLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>createRollingFileLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createRollingFileLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) {
+        throw new Error(&#x27;createRollingFileLogger requires configuration options for this constructor&#x27;);
+    }
+
+    var opts;
+
+    // read a dynamic config file if available
+    if (typeof options.readLoggerConfig === &#x27;function&#x27;) {
+        opts = options.readLoggerConfig();
+
+        opts.readLoggerConfig = options.readLoggerConfig;
+    } else {
+        opts = options;
+    }
+
+    var manager = new SimpleLogger( opts );
+
+    manager.createRollingFileAppender( opts );
+
+    if (opts.refresh &#x26;&#x26; opts.loggerConfigFile) {
+        process.nextTick( manager.startRefreshThread );
+    }
+
+    return manager.createLogger( opts );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// create a rolling file logger based on date/time
+const opts = {
+    logDirectory:&#x27;/mylogfiles&#x27;,
+    fileNamePattern:&#x27;roll-&#x3c;DATE&#x3e;.log&#x27;,
+    dateFormat:&#x27;YYYY.MM.DD&#x27;
+};
+
+const log = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createRollingFileLogger</span>( opts );
+
+or
+
+	// create a log manager
+const manager = require(&#x27;simple-node-logger&#x27;).createLogManager();
+
+manager.createConsoleAppender();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.createSimpleFileLogger" id="apidoc.element.simple-node-logger.createSimpleFileLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>createSimpleFileLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSimpleFileLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    var opts;
+
+    if (!options) {
+        throw new Error(&#x27;must create file logger with a logFilePath&#x27;);
+    }
+
+    // if options is a string then it must be the
+    if (typeof options === &#x27;string&#x27;) {
+        opts = {
+            logFilePath: options
+        };
+    } else {
+        opts = dash.clone( options );
+    }
+
+    var manager = new SimpleLogger( opts );
+
+    manager.createFileAppender( opts );
+
+    return manager.createLogger();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			timestampFormat:&#x27;YYYY-MM-DD HH:mm:ss.SSS&#x27;
+		},
+		log = SimpleNodeLogger.createSimpleLogger( opts );
+
+or
+
+	// create a file only file logger
+	const log = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createSimpleFileLogger</span>(&#x27;project
+.log&#x27;);
+	
+or
+
+// create a rolling file logger based on date/time
+const opts = {
+    logDirectory:&#x27;/mylogfiles&#x27;,
+    fileNamePattern:&#x27;roll-&#x3c;DATE&#x3e;.log&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.createSimpleLogger" id="apidoc.element.simple-node-logger.createSimpleLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>createSimpleLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSimpleLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    var opts;
+
+    if (!options) {
+        options = {};
+    }
+
+    // if options is a string then it must be the
+    if (typeof options === &#x27;string&#x27;) {
+        opts = {
+            logFilePath: options
+        };
+    } else {
+        opts = dash.clone( options );
+    }
+
+    const manager = new SimpleLogger(opts);
+
+    // pass options in to change date formats, etc
+    manager.createConsoleAppender( opts );
+
+    if (opts.logFilePath) {
+        manager.createFileAppender( opts );
+    }
+
+    return manager.createLogger();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    npm install simple-node-logger --save
+
+
+## How to use
+
+	// create a stdout console logger
+	const log = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createSimpleLogger</span>();
+
+or
+
+	// create a stdout and file logger
+	const log = require(&#x27;simple-node-logger&#x27;).createSimpleLogger(&#x27;project.log&#x27;);
+	
+or
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.mocks.MockLogger" id="apidoc.element.simple-node-logger.mocks.MockLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>mocks.MockLogger
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mocks.MockLogger = function (opts) {
+    &#x27;use strict&#x27;;
+
+    const mock = this,
+        appender = new MockAppender();
+
+    if (!opts) opts = {};
+    if (!opts.pid) opts.pid = &#x27;test12345&#x27;;
+    if (!opts.appenders) opts.appenders = [ appender ];
+    if (!opts.level) opts.level = &#x27;trace&#x27;;
+
+    dash.extend( this, new Logger(opts) );
+
+    this.getLogEntries = function() {
+        return appender.entries;
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-node-logger.AbstractAppender" id="apidoc.module.simple-node-logger.AbstractAppender">module simple-node-logger.AbstractAppender</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.AbstractAppender.AbstractAppender" id="apidoc.element.simple-node-logger.AbstractAppender.AbstractAppender">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>AbstractAppender
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractAppender = function (options) {
+    &#x27;use strict&#x27;;
+
+    const appender = this,
+        typeName = options.typeName,
+        timestampFormat = options.timestampFormat || &#x27;HH:mm:ss.SSS&#x27;;
+
+    this.separator = options.separator || &#x27; &#x27;;
+
+<span class="apidocCodeCommentSpan">    /**
+     * format the entry and return the field list
+     *
+     * @param entry the log entry
+     * @returns field array
+     */
+</span>    this.formatEntry = function(entry) {
+        var fields = [];
+
+        if (entry.domain) {
+            fields.push( entry.domain );
+        }
+
+        fields.push( appender.formatTimestamp( entry.ts ) );
+        fields.push( appender.formatLevel( entry.level ) );
+
+        if (entry.category) {
+            fields.push( entry.category );
+        }
+
+        fields.push( appender.formatMessage( entry.msg ) );
+
+        return fields;
+    };
+
+    this.formatMessage = function(msg) {
+        var list;
+
+        if (!msg) {
+            return &#x27;&#x27;;
+        }
+
+        if (util.isArray( msg )) {
+            list = msg.map(function(item) {
+                if (util.isDate( item )) {
+                    return appender.formatDate( item );
+                } else {
+                    return appender.formatObject( item );
+                }
+            });
+
+            return list.join(&#x27;&#x27;);
+        } else {
+            return msg;
+        }
+    };
+
+    this.formatDate = function(value) {
+        return value.toJSON();
+    };
+
+    this.formatObject = function(value) {
+        if (!value) {
+            return &#x27;&#x27;;
+        }
+
+        if (dash.isObject( value )) {
+            try {
+                return JSON.stringify( value );
+            } catch (ignore) {
+                return &#x27;json error: &#x27; + value.toString();
+            }
+        } else {
+            var s = value.toString();
+            if (s === &#x27;[object Object]&#x27;) {
+                return util.inspect( value );
+            } else {
+                return s;
+            }
+        }
+    };
+
+    /**
+     * format the level string by forcing to upper case and padding to 5 chars
+     *
+     * @param level
+     * @returns {string}
+     */
+    this.formatLevel = function(level) {
+        var str = level.toUpperCase();
+        if (str.length &#x3c; 5) str += &#x27; &#x27;;
+
+        return str;
+    };
+
+    /**
+     * format the timestamp to HH:mm:ss.SSS
+     *
+     * @param ts the unix milliseconds
+     * @returns formatted string
+     */
+    this.formatTimestamp = function(ts) {
+        return moment( ts ).format( timestampFormat );
+    };
+
+    /**
+     * return the type name of this appender (ConsoleAppender)
+     */
+    this.getTypeName = function() {
+        return typeName;
+    };
+
+    // constructor tests
+    if (!typeName) throw new Error(&#x27;appender must be constructed with a type name&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.AbstractAppender.extend" id="apidoc.element.simple-node-logger.AbstractAppender.extend">
+        function <span class="apidocSignatureSpan">simple-node-logger.AbstractAppender.</span>extend
+        <span class="apidocSignatureSpan">(child, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (child, options) {
+    &#x27;use strict&#x27;;
+
+    const parent = new AbstractAppender( options );
+
+    dash.extend( child, parent );
+
+    return parent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	&#x27;use strict&#x27;;
+	var appender = this;
+	
+    var opts = {
+        typeName:&#x27;JSONAppender&#x27;
+    };
+
+    AbstractAppender.<span class="apidocCodeKeywordSpan">extend</span>( this, opts );
+
+    // format and write all entry/statements
+    this.write = function(entry) {
+    	var fields = appender.formatEntry( entry );
+    	
+    	process.stdout.write( JSON.stringify( entry ) + &#x27;\n&#x27; );
+    };
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-node-logger.SimpleLogger" id="apidoc.module.simple-node-logger.SimpleLogger">module simple-node-logger.SimpleLogger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger.SimpleLogger" id="apidoc.element.simple-node-logger.SimpleLogger.SimpleLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.</span>SimpleLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SimpleLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) options = {};
+
+    var manager = this,
+        domain = options.domain,
+        appenders = options.appenders || [],
+        loggers = options.loggers || [],
+        dfltLevel = options.level || Logger.DEFAULT_LEVEL,
+        loggerConfigFile = options.loggerConfigFile,
+        refresh = options.refresh,
+        fs = options.fs || require(&#x27;fs&#x27; ),
+        createInterval = options.createInterval || setInterval,
+        minRefresh = options.minRefresh || 10 * 1000,
+        refreshId;
+
+<span class="apidocCodeCommentSpan">    /**
+     * create a logger with optional category and level
+     *
+     * @param category
+     * @param level
+     */
+</span>    this.createLogger = function(category, level) {
+        var logger;
+
+        var opts = Object.prototype.toString.call(category) === &#x27;[object String]&#x27; ? options : dash.merge({}, options, category);
+
+        opts.category  = dash.isString(category) ? category : opts.category;
+        opts.level     = level ? level : opts.level || dfltLevel;
+        opts.appenders = appenders;
+
+        logger = new Logger( opts );
+        loggers.push( logger );
+
+        return logger;
+    };
+
+    /**
+     * create the console appender and add it to the appenders list
+     *
+     * @param opts - appender settings
+     * @returns ConsoleAppender -
+     */
+    this.createConsoleAppender = function(opts) {
+        if (!opts) opts = {};
+
+        return manager.addAppender( new ConsoleAppender( opts ) );
+    };
+
+    /**
+     * create a file appender and add it to the appenders list
+     *
+     * @param opts
+     * @returns a FileAppender object
+     */
+    this.createFileAppender = function(opts) {
+        if (!opts) {
+            throw new Error(&#x27;file appender must be created with log file path set in options&#x27;);
+        }
+
+        return manager.addAppender( new FileAppender( opts ) );
+    };
+
+    /**
+     * create a rolling file appender and add it to the appender list
+     *
+     * @param opts
+     * @returns the appender
+     */
+    this.createRollingFileAppender = function( opts ) {
+        return manager.addAppender( new RollingFileAppender( opts ) );
+    };
+
+    /**
+     * add the appender to list
+     *
+     * @param appender
+     * @returns the new appender
+     */
+    this.addAppender = function(appender) {
+        appenders.push( appender );
+
+        return appender;
+    };
+
+    this.getAppenders = function() {
+        return appenders;
+    };
+
+    this.getLoggers = function() {
+        return loggers;
+    };
+
+    /**
+     * start the refresh thread; minimum cycle time = 10 seconds...
+     */
+    this.startRefreshThread = function() {
+        // TODO replace with watcher thread
+        if (fs.existsSync( loggerConfigFile ) &#x26;&#x26; dash.isNumber( refresh )) {
+            var t = Math.max( minRefresh, refresh );
+            refreshId = createInterval( manager.readConfig, t);
+        }
+    };
+
+    /**
+     * set the level of all loggers to the specified level
+     *
+     * @param level - one of the know levels
+     */
+    this.setAllLoggerLevels = function(level) {
+        loggers.forEach(function(logger) {
+            logger.setLevel( level );
+        });
+    };
+
+    /**
+     * read and parse the config file; change settings if required
+     */
+    this.readConfig = function(completeCallback) {
+        // TODO refactor into configuration delegate to read stats and then process file only if stats change
+        const callback = (err, buf) =&#x3e; {
+            if (err) {
+                console.log( err );
+            } else {
+
+                const conf = JSON.parse( buf.toString() );
+                if (conf.appenders &#x26;&#x26; conf.appenders.length &#x3e; 0) {
+                    // find each appender and set the level
+                    conf.appenders.forEach(function(app) {
+                        const level = app.level;
+
+                        const appender = dash.find( appenders, (item) =&#x3e; {
+                            if (item.getTypeName() === app.typeName &#x26;&#x26; app.level) {
+                                return item;
+                            } ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger.AbstractAppender" id="apidoc.element.simple-node-logger.SimpleLogger.AbstractAppender">
+        function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>AbstractAppender
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractAppender = function (options) {
+    &#x27;use strict&#x27;;
+
+    const appender = this,
+        typeName = options.typeName,
+        timestampFormat = options.timestampFormat || &#x27;HH:mm:ss.SSS&#x27;;
+
+    this.separator = options.separator || &#x27; &#x27;;
+
+<span class="apidocCodeCommentSpan">    /**
+     * format the entry and return the field list
+     *
+     * @param entry the log entry
+     * @returns field array
+     */
+</span>    this.formatEntry = function(entry) {
+        var fields = [];
+
+        if (entry.domain) {
+            fields.push( entry.domain );
+        }
+
+        fields.push( appender.formatTimestamp( entry.ts ) );
+        fields.push( appender.formatLevel( entry.level ) );
+
+        if (entry.category) {
+            fields.push( entry.category );
+        }
+
+        fields.push( appender.formatMessage( entry.msg ) );
+
+        return fields;
+    };
+
+    this.formatMessage = function(msg) {
+        var list;
+
+        if (!msg) {
+            return &#x27;&#x27;;
+        }
+
+        if (util.isArray( msg )) {
+            list = msg.map(function(item) {
+                if (util.isDate( item )) {
+                    return appender.formatDate( item );
+                } else {
+                    return appender.formatObject( item );
+                }
+            });
+
+            return list.join(&#x27;&#x27;);
+        } else {
+            return msg;
+        }
+    };
+
+    this.formatDate = function(value) {
+        return value.toJSON();
+    };
+
+    this.formatObject = function(value) {
+        if (!value) {
+            return &#x27;&#x27;;
+        }
+
+        if (dash.isObject( value )) {
+            try {
+                return JSON.stringify( value );
+            } catch (ignore) {
+                return &#x27;json error: &#x27; + value.toString();
+            }
+        } else {
+            var s = value.toString();
+            if (s === &#x27;[object Object]&#x27;) {
+                return util.inspect( value );
+            } else {
+                return s;
+            }
+        }
+    };
+
+    /**
+     * format the level string by forcing to upper case and padding to 5 chars
+     *
+     * @param level
+     * @returns {string}
+     */
+    this.formatLevel = function(level) {
+        var str = level.toUpperCase();
+        if (str.length &#x3c; 5) str += &#x27; &#x27;;
+
+        return str;
+    };
+
+    /**
+     * format the timestamp to HH:mm:ss.SSS
+     *
+     * @param ts the unix milliseconds
+     * @returns formatted string
+     */
+    this.formatTimestamp = function(ts) {
+        return moment( ts ).format( timestampFormat );
+    };
+
+    /**
+     * return the type name of this appender (ConsoleAppender)
+     */
+    this.getTypeName = function() {
+        return typeName;
+    };
+
+    // constructor tests
+    if (!typeName) throw new Error(&#x27;appender must be constructed with a type name&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger.Logger" id="apidoc.element.simple-node-logger.SimpleLogger.Logger">
+        function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>Logger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Logger = function (options) {
+    &#x27;use strict&#x27;;
+
+    const logger = this,
+        pid = options.pid || process.pid;
+
+    let domain = options.domain,
+        category = options.category,
+        level = options.level || Logger.DEFAULT_LEVEL,
+        levels = options.levels || Logger.STANDARD_LEVELS,
+        currentLevel = levels.indexOf( level ),
+        appenders = options.appenders || [];
+
+    // helper method
+    const isLevelAt = function(lvl) {
+        const idx = levels.indexOf( lvl );
+
+        return idx &#x3e;= currentLevel;
+    };
+
+<span class="apidocCodeCommentSpan">    /**
+     * log the statement message
+     *
+     * @param level the level of this message
+     * @param msg
+     */
+</span>    this.log = function(level, msg) {
+        var entry = logger.createEntry( level, msg );
+
+        process.nextTick(function() {
+            // write the message to the appenders...
+            appenders.forEach(function(appender) {
+                appender.write( entry );
+            });
+        });
+
+        return entry;
+    };
+
+    /**
+     * create the entry object used to log messages
+     *
+     * @param level - info, debug, etc.
+     * @param messageList - a list of message objects
+     * @returns then entry object
+     */
+    this.createEntry = function(level, messageList) {
+        const entry = {};
+
+        entry.ts = Date.now();
+
+        entry.pid = pid;
+        if (domain) entry.domain = domain;
+        if (category) entry.category = category;
+
+        entry.level = level;
+        entry.msg = messageList;
+
+        return entry;
+    };
+
+    /**
+     * set the level
+     *
+     * @param lvl one of the recognized logger levels
+     */
+    this.setLevel = function(lvl) {
+        currentLevel = levels.indexOf(lvl);
+        level = lvl;
+        appenders.forEach(app =&#x3e; {
+            app.setLevel( lvl );
+        });
+    };
+
+    /**
+     * return the current level string
+     */
+    this.getLevel = function() {
+        return level;
+    };
+
+    /**
+     * set the list of appenders
+     * @param app
+     */
+    this.setAppenders = function(appenderList) {
+        appenders = appenderList;
+    };
+
+    /**
+     * add an appender to the list
+     *
+     * @param appender - implements write method
+     */
+    this.addAppender = function(appender) {
+        appenders.push( appender );
+    };
+
+    /**
+     * remove the appender using the type name
+     */
+    this.removeAppender = function(typeName) {
+        throw new Error(&#x27;not implemented yet&#x27;);
+    };
+
+    this.getAppenders = function() {
+        return appenders;
+    };
+
+    this.isDebug = function() {
+        return isLevelAt( &#x27;debug&#x27; );
+    };
+
+    this.isInfo = function() {
+        return isLevelAt( &#x27;info&#x27; );
+    };
+
+    // now initialize the methods for the standard levels
+    const init = function() {
+        levels.forEach(function(lvl) {
+            logger[ lvl ] = function() {
+                if (levels.indexOf( lvl ) &#x3e;= currentLevel) {
+                    var args = Array.prototype.slice.call( arguments );
+                    logger.log( lvl, args );
+                }
+            };
+        });
+    };
+
+    this.__protected = function() {
+        return {
+            pid:pid,
+            domain:domain,
+            category:category
+        };
+    };
+
+    init();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger.createLogManager" id="apidoc.element.simple-node-logger.SimpleLogger.createLogManager">
+        function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createLogManager
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createLogManager = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) {
+        options = {};
+    }
+
+    var opts;
+
+    // read a dynamic config file if available
+    if (typeof options.readLoggerConfig === &#x27;function&#x27;) {
+        opts = options.readLoggerConfig();
+
+        opts.readLoggerConfig = options.readLoggerConfig;
+    } else {
+        opts = options;
+    }
+
+    var manager = new SimpleLogger( opts );
+
+    if (opts.logDirectory &#x26;&#x26; opts.fileNamePattern) {
+        manager.createRollingFileAppender( opts );
+    }
+
+    // create at least one appender
+    if (manager.getAppenders().length === 0) {
+        manager.createConsoleAppender( opts );
+    }
+
+    return manager;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+const log = require(&#x27;simple-node-logger&#x27;).createRollingFileLogger( opts );
+
+or
+
+	// create a log manager
+const manager = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createLogManager</span>();
+
+manager.createConsoleAppender();
+
+const log = manager.createLogger(&#x27;MyClass&#x27;);
+// create other logs and appenders...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger.createRollingFileLogger" id="apidoc.element.simple-node-logger.SimpleLogger.createRollingFileLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createRollingFileLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createRollingFileLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) {
+        throw new Error(&#x27;createRollingFileLogger requires configuration options for this constructor&#x27;);
+    }
+
+    var opts;
+
+    // read a dynamic config file if available
+    if (typeof options.readLoggerConfig === &#x27;function&#x27;) {
+        opts = options.readLoggerConfig();
+
+        opts.readLoggerConfig = options.readLoggerConfig;
+    } else {
+        opts = options;
+    }
+
+    var manager = new SimpleLogger( opts );
+
+    manager.createRollingFileAppender( opts );
+
+    if (opts.refresh &#x26;&#x26; opts.loggerConfigFile) {
+        process.nextTick( manager.startRefreshThread );
+    }
+
+    return manager.createLogger( opts );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// create a rolling file logger based on date/time
+const opts = {
+    logDirectory:&#x27;/mylogfiles&#x27;,
+    fileNamePattern:&#x27;roll-&#x3c;DATE&#x3e;.log&#x27;,
+    dateFormat:&#x27;YYYY.MM.DD&#x27;
+};
+
+const log = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createRollingFileLogger</span>( opts );
+
+or
+
+	// create a log manager
+const manager = require(&#x27;simple-node-logger&#x27;).createLogManager();
+
+manager.createConsoleAppender();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger.createSimpleFileLogger" id="apidoc.element.simple-node-logger.SimpleLogger.createSimpleFileLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createSimpleFileLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSimpleFileLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    var opts;
+
+    if (!options) {
+        throw new Error(&#x27;must create file logger with a logFilePath&#x27;);
+    }
+
+    // if options is a string then it must be the
+    if (typeof options === &#x27;string&#x27;) {
+        opts = {
+            logFilePath: options
+        };
+    } else {
+        opts = dash.clone( options );
+    }
+
+    var manager = new SimpleLogger( opts );
+
+    manager.createFileAppender( opts );
+
+    return manager.createLogger();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			timestampFormat:&#x27;YYYY-MM-DD HH:mm:ss.SSS&#x27;
+		},
+		log = SimpleNodeLogger.createSimpleLogger( opts );
+
+or
+
+	// create a file only file logger
+	const log = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createSimpleFileLogger</span>(&#x27;project
+.log&#x27;);
+	
+or
+
+// create a rolling file logger based on date/time
+const opts = {
+    logDirectory:&#x27;/mylogfiles&#x27;,
+    fileNamePattern:&#x27;roll-&#x3c;DATE&#x3e;.log&#x27;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.SimpleLogger.createSimpleLogger" id="apidoc.element.simple-node-logger.SimpleLogger.createSimpleLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.SimpleLogger.</span>createSimpleLogger
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createSimpleLogger = function (options) {
+    &#x27;use strict&#x27;;
+
+    var opts;
+
+    if (!options) {
+        options = {};
+    }
+
+    // if options is a string then it must be the
+    if (typeof options === &#x27;string&#x27;) {
+        opts = {
+            logFilePath: options
+        };
+    } else {
+        opts = dash.clone( options );
+    }
+
+    const manager = new SimpleLogger(opts);
+
+    // pass options in to change date formats, etc
+    manager.createConsoleAppender( opts );
+
+    if (opts.logFilePath) {
+        manager.createFileAppender( opts );
+    }
+
+    return manager.createLogger();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    npm install simple-node-logger --save
+
+
+## How to use
+
+	// create a stdout console logger
+	const log = require(&#x27;simple-node-logger&#x27;).<span class="apidocCodeKeywordSpan">createSimpleLogger</span>();
+
+or
+
+	// create a stdout and file logger
+	const log = require(&#x27;simple-node-logger&#x27;).createSimpleLogger(&#x27;project.log&#x27;);
+	
+or
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-node-logger.appenders" id="apidoc.module.simple-node-logger.appenders">module simple-node-logger.appenders</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.appenders.ConsoleAppender" id="apidoc.element.simple-node-logger.appenders.ConsoleAppender">
+        function <span class="apidocSignatureSpan">simple-node-logger.appenders.</span>ConsoleAppender
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ConsoleAppender = function (options) {
+    &#x27;use strict&#x27;;
+
+    if (!options) options = {};
+
+    let appender = this,
+        typeName = options.typeName,
+        level = options.level || Logger.STANDARD_LEVELS[0],
+        levels = options.levels || Logger.STANDARD_LEVELS,
+        currentLevel = levels.indexOf( level ),
+        writer = options.writer || console.log;
+
+    if (!typeName) {
+        typeName = options.typeName = &#x27;ConsoleAppender&#x27;;
+    }
+
+    AbstractAppender.extend( this, options );
+
+<span class="apidocCodeCommentSpan">    /**
+     * default formatter for this appender;
+     * @param entry
+     */
+</span>    this.formatter = function(entry) {
+        var fields = appender.formatEntry( entry );
+
+        return fields.join( appender.separator );
+    };
+
+    /**
+     * call formatter then write the entry to the console output
+     * @param entry - the log entry
+     */
+    this.write = function(entry) {
+        if (levels.indexOf( entry.level ) &#x3e;= currentLevel) {
+            writer( appender.formatter( entry ));
+        }
+    };
+
+    this.setLevel = function(level) {
+        const idx = levels.indexOf( level );
+        if (idx &#x3e;= 0) {
+            currentLevel = idx;
+        }
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.appenders.FileAppender" id="apidoc.element.simple-node-logger.appenders.FileAppender">
+        function <span class="apidocSignatureSpan">simple-node-logger.appenders.</span>FileAppender
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">FileAppender = function (options) {
+    &#x27;use strict&#x27;;
+
+    const appender = this,
+        fs = options.fs || require( &#x27;fs&#x27; ),
+        newline = /^win/.test(process.platform) ? &#x27;\r\n&#x27; : &#x27;\n&#x27;;
+
+    let typeName = options.typeName,
+        autoOpen = dash.isBoolean( options.autoOpen ) ? options.autoOpen : true,
+        logFilePath = options.logFilePath,
+        level = options.level || Logger.DEFAULT_LEVEL,
+        levels = options.levels || Logger.STANDARD_LEVELS,
+        currentLevel = levels.indexOf( level ),
+        writer = options.writer;
+
+    if (!typeName) {
+        // required for abstract class
+        typeName = options.typeName = &#x27;FileAppender&#x27;;
+    }
+
+    AbstractAppender.extend( this, options );
+
+<span class="apidocCodeCommentSpan">    /**
+     * default formatter for this appender;
+     * @param entry
+     */
+</span>    this.formatter = function(entry) {
+        var fields = appender.formatEntry( entry );
+
+        // add new line (for linux and windows)
+        fields.push( newline );
+
+        return fields.join( appender.separator );
+    };
+
+    /**
+     * call formatter then write the entry to the console output
+     * @param entry - the log entry
+     */
+    this.write = function(entry) {
+        if (levels.indexOf( entry.level ) &#x3e;= currentLevel) {
+            writer.write( appender.formatter( entry ) );
+        }
+    };
+
+    this.setLevel = function(level) {
+        var idx = levels.indexOf( level );
+        if (idx &#x3e;= 0) {
+            currentLevel = idx;
+        }
+    };
+
+    // writer is opened on construction
+    const openWriter = function() {
+        if (!writer) {
+            var file = path.normalize( logFilePath ),
+                opts = {
+                    flags:&#x27;a&#x27;,
+                    encoding:&#x27;utf8&#x27;
+                };
+
+            writer = fs.createWriteStream( file, opts );
+        }
+    };
+
+    this.closeWriter = function() {
+        if (writer) {
+            writer.end(&#x27;\n&#x27;);
+        }
+    };
+
+    // constructor tests
+    (function() {
+        if (!logFilePath) {
+            throw new Error(&#x27;appender must be constructed with a log file path&#x27;);
+        }
+    }());
+
+    if (autoOpen) {
+        openWriter();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.appenders.RollingFileAppender" id="apidoc.element.simple-node-logger.appenders.RollingFileAppender">
+        function <span class="apidocSignatureSpan">simple-node-logger.appenders.</span>RollingFileAppender
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RollingFileAppender = function (options) {
+    &#x27;use strict&#x27;;
+
+    const appender = this,
+        fs = options.fs || require( &#x27;fs&#x27; ),
+        newline = /^win/.test(process.platform) ? &#x27;\r\n&#x27; : &#x27;\n&#x27;;
+
+    let typeName = options.typeName,
+        autoOpen = dash.isBoolean( options.autoOpen ) ? options.autoOpen : true,
+        logDirectory = options.logDirectory,
+        fileNamePattern = options.fileNamePattern,
+        dateFormat = options.dateFormat || &#x27;YYYY.MM.DD&#x27;,
+        level = options.level || Logger.DEFAULT_LEVEL,
+        levels = options.levels || Logger.STANDARD_LEVELS,
+        currentLevel = levels.indexOf( level ),
+        currentFile = options.currentFile,
+        rollTimer,
+        createInterval = options.createInterval || setInterval,
+        writers = [];
+
+    if (!typeName) {
+        typeName = options.typeName = &#x27;RollingFileAppender&#x27;;
+    }
+
+    AbstractAppender.extend( this, options );
+        const getWriter = function() {
+        return writers[0];
+    };
+
+    const openWriter = function(filename) {
+        let writer,
+            file,
+            opts;
+
+        if (!filename) {
+            filename = appender.createFileName();
+        }
+
+        file = path.join( logDirectory, filename );
+        opts = {
+            flags:&#x27;a&#x27;,
+            encoding:&#x27;utf8&#x27;
+        };
+
+        writer = fs.createWriteStream( file, opts );
+
+        // make this the current writer...
+        writers.unshift( writer );
+        currentFile = file;
+
+        // now close the current logger and remove from the writers list
+        while (writers.length &#x3e; 1) {
+            // close the old writer
+            writer = writers.pop();
+            writer.removeAllListeners();
+            writer.end(&#x27;\n&#x27;);
+        }
+    };
+
+    // check once per minute to see if we need to roll
+    const startRollTimer = function() {
+        rollTimer = createInterval(function() {
+            if (appender.checkForRoll()) {
+                openWriter();
+            }
+        }, 60 * 1000);
+    };
+
+<span class="apidocCodeCommentSpan">    /**
+     * default formatter for this appender;
+     * @param entry
+     */
+</span>    this.formatter = function(entry) {
+        var fields = appender.formatEntry( entry );
+
+        fields.push( newline );
+
+        return fields.join( appender.separator );
+    };
+
+    /**
+     * call formatter then write the entry to the console output
+     * @param entry - the log entry
+     */
+    this.write = function(entry) {
+        if (levels.indexOf( entry.level ) &#x3e;= currentLevel) {
+            var writer = getWriter();
+            if (writer) {
+                writer.write( appender.formatter( entry ) );
+            } else {
+                console.log( &#x27;no writer...&#x27; );
+            }
+        }
+    };
+
+    this.checkForRoll = function(now) {
+        // check to see if the
+        const fn = appender.createFileName( now ),
+            current = path.basename( currentFile );
+
+        return fn !== current;
+    };
+
+    this.createFileName = function(now) {
+        let dt;
+
+        if (now || now instanceof moment) {
+            dt = now.format( dateFormat );
+        } else {
+            dt = moment().format( dateFormat );
+        }
+
+        return fileNamePattern.replace( /&#x3c;DATE&#x3e;/i, dt );
+    };
+
+    this.setLevel = function(level) {
+        const idx = levels.indexOf( level );
+        if (idx &#x3e;= 0) {
+            currentLevel = idx;
+        }
+    };
+
+    this.__protected = function() {
+        return {
+            openWriter:openWriter,
+            currentFile:currentFile,
+            rollTimer:rollTimer,
+            writers:writers
+        };
+    };
+
+    // constructor tests
+    (function() {
+        if (!logDirectory) {
+            throw new Error(&#x27;appender must be constructed with a log directory&#x27;);
+        }
+        if (!fileNamePattern) {
+            throw new Error(&#x27;appender must be constructed with a file name pattern&#x27;);
+        }
+    }());
+
+
+    // now validate the date pattern and file format
+    // date may only contain YMDHAa-.
+
+    if (autoOpen) {
+        openWriter();
+        startRollTimer();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-node-logger.mocks" id="apidoc.module.simple-node-logger.mocks">module simple-node-logger.mocks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.mocks.MockAppender" id="apidoc.element.simple-node-logger.mocks.MockAppender">
+        function <span class="apidocSignatureSpan">simple-node-logger.mocks.</span>MockAppender
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MockAppender = function () {
+    &#x27;use strict&#x27;;
+    const Logger = require(&#x27;../../lib/Logger&#x27; );
+    let level  = Logger.DEFAULT_LEVEL,
+        levels = Logger.STANDARD_LEVELS,
+        currentLevel = levels.indexOf( level );
+    let appender = this;
+
+    this.entries = [];
+
+    this.setLevel = function(level) {
+        var idx = levels.indexOf( level );
+        if (idx &#x3e;= 0) {
+            currentLevel = idx;
+        }
+    };
+
+    this.write = function(entry) {
+        appender.entries.push( entry );
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.mocks.MockLogger" id="apidoc.element.simple-node-logger.mocks.MockLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.mocks.</span>MockLogger
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MockLogger = function (opts) {
+    &#x27;use strict&#x27;;
+
+    const mock = this,
+        appender = new MockAppender();
+
+    if (!opts) opts = {};
+    if (!opts.pid) opts.pid = &#x27;test12345&#x27;;
+    if (!opts.appenders) opts.appenders = [ appender ];
+    if (!opts.level) opts.level = &#x27;trace&#x27;;
+
+    dash.extend( this, new Logger(opts) );
+
+    this.getLogEntries = function() {
+        return appender.entries;
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.simple-node-logger.mocks.MockLogger" id="apidoc.module.simple-node-logger.mocks.MockLogger">module simple-node-logger.mocks.MockLogger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.mocks.MockLogger.MockLogger" id="apidoc.element.simple-node-logger.mocks.MockLogger.MockLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.mocks.</span>MockLogger
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MockLogger = function (opts) {
+    &#x27;use strict&#x27;;
+
+    const mock = this,
+        appender = new MockAppender();
+
+    if (!opts) opts = {};
+    if (!opts.pid) opts.pid = &#x27;test12345&#x27;;
+    if (!opts.appenders) opts.appenders = [ appender ];
+    if (!opts.level) opts.level = &#x27;trace&#x27;;
+
+    dash.extend( this, new Logger(opts) );
+
+    this.getLogEntries = function() {
+        return appender.entries;
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.simple-node-logger.mocks.MockLogger.createLogger" id="apidoc.element.simple-node-logger.mocks.MockLogger.createLogger">
+        function <span class="apidocSignatureSpan">simple-node-logger.mocks.MockLogger.</span>createLogger
+        <span class="apidocSignatureSpan">(category, level)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createLogger = function (category, level) {
+    &#x27;use strict&#x27;;
+
+    const opts = {};
+
+    if (category) opts.category = category;
+    if (level) opts.level = level;
+
+    return new MockLogger( opts );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+or
+
+	// create a log manager
+    const manager = require(&#x27;simple-node-logger&#x27;).createLogManager();
+
+    manager.createConsoleAppender();
+
+    const log = manager.<span class="apidocCodeKeywordSpan">createLogger</span>(&#x27;MyClass&#x27;);
+    // create other logs and appenders...
+
+
+The first use simply logs to the console.  The second logs to the console and to the project.log file.  The third create a console
+ logger with a custom timestamp format. The fourth logs to the file only. The fifth creates a rolling file log system in the target
+ log folder.  The fifth creates a log manager to enable you to add various appenders with multiple levels and create logs for each
+ module or class.
+
+*See the examples folder for in depth samples...*
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
